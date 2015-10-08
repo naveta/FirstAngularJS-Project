@@ -1,0 +1,62 @@
+
+
+<div class="container">
+    <div class="jumbotron" style="padding-bottom:0px;">
+        <h2>Create Employee using Spring Api!</h2>
+    </div>
+
+    <form class="form-signin" name="createEmployeeForm">
+
+        <div class="form-group"  ng-class="{ 'has-error' : createEmployeeForm.email.$invalid }">
+            <label>Email</label>
+
+            <input type="email" name="email" ng-model="user.email" class="form-group">
+
+            <p class="help-block" ng-show="createEmployeeForm.email.$invalid">enter a valid email id</p>
+
+            <br>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="form-group" ng-class="{ 'has-error' : createEmployeeForm.name.$invalid }">
+
+            <label>Name</label>
+
+            <input type="text" name="name" ng-model="user.name">
+
+            <!--<p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>-->
+
+        </div>
+
+        <br>
+
+        <br>
+
+
+        <div class="form-group" ng-class="{ 'has-error' : createEmployeeForm.salary.$invalid }">
+
+            <label>Salary</label>
+
+            <input type="number" name="salary" ng-model="user.salary">
+
+            <!--<p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>-->
+
+            <p style="color:red;" ng-show="regStatus">{{message}}</p>
+
+        </div>
+
+
+        <a href="#/emps"> Get Employees</a>
+
+        <br>
+
+        <br>
+
+        <button type="button" ng-disabled ="!user.email || !user.name" class="btn btn-lg btn-primary btn-block" ng-click="createEmployee();">Create</button>
+
+    </form>
+
+</div>

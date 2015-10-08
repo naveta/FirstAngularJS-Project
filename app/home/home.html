@@ -1,0 +1,35 @@
+<div class="container" ng-controller="homeController">
+    <div class="jumbotron" style="padding-bottom: 0px">
+
+        <h2> Angular JS and firebase app</h2>
+
+    </div>
+
+    <form class="form-signin" role="form" name="homeForm">
+
+        <input ng-model="user.email" type="email" class="form-control" placeholder="email" name="email">
+
+        <p class="help-block" ng-show="homeForm.email.$invalid">enter a valid email id</p>
+
+        <input ng-model="user.password" type="password" class="form-control" placeholder="password" name="password" ng-minlength="7">
+
+        <p class="help-block" ng-show="homeForm.password.$error.minlength">enter a valid email id</p>
+
+
+        <div class="row">
+            <div class="col-sm-6 text-left">
+                <a href="#/create">Create Employee </a>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a href="#/emps">Get All Employees</a>
+            </div>
+        </div>
+        <hr/>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" ng-click="SignIn($event)" ng-disabled="!user.email || !user.password">Sign In</button>
+        <div class="row">
+            <div class="col-sm-12 text-center" style="margin-top: 20px">
+                <a href="#/register">Sign Up</a>
+            </div>
+        </div>
+    </form>
+</div>

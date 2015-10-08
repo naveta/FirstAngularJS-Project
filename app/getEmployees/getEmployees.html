@@ -1,0 +1,41 @@
+<div class="container">
+
+    <button type="button" class="btn btn-xs-sm btn-primary btn-block" ng-click="getUserList();">get employees</button>
+
+
+
+
+    <div >
+
+        <table style="width:100%">
+
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+            </tr>
+
+            <tr ng-repeat="user in users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.salary}}</td>
+            </tr>
+
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="#/create"> create Employees</a>
+
+
+    </div>
+
+
+
+
+
+</div>
